@@ -1,0 +1,84 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<title>calci</title>
+	<style>
+.cal_container {
+	text-align: center;
+    margin-left: 425px;
+    margin-top: 60px;
+    margin-right: 425px;
+    font-size: 22px;
+    background: cornflowerblue;
+    font-family: math;
+    color: white;
+    border: outset;
+ }
+.cal_container button {
+    min-width: 31px;
+    height: 31px;
+    font-size: unset;
+    background: dimgray;
+    color: white;
+    margin: 10px 5px;
+}
+		
+	</style>
+ </head>
+ 	
+<body>
+	<div class="cal_container">
+		<h1>First Calculator</h1>
+		<label style="margin: 13px;">firstNumber</label> &nbsp;
+		<label style="margin: 45px;">secoundNumber</label><br>
+		<input type="number" name="firstNumber" id="firstNumber"> 
+		<input type="text" name="secoundNumber" id="secoundNumber"> <br>
+			<button id="plusBtn">+</button>
+			<button id="subtractBtn">-</button>
+			<button id="multiBtn">*</button>
+			<button id="devideBtn">/</button>	
+			<button id="modulusBtn">%</button>	
+			<button id="resetBtn">reset</button>	
+		<h1>Result =<span id="result"></span></h1>
+	</div>
+</body>
+</html>
+<script>
+	// 	function sum(first,second){
+	// 	return first+second;
+	// }
+
+
+	var firstNumber = document.querySelector('#firstNumber');
+	var secoundNumber = document.querySelector('#secoundNumber');
+	
+	var plusBtn = document.querySelector('#plusBtn');
+	var subtractBtn = document.querySelector('#subtractBtn');
+	var multiBtn = document.querySelector('#multiBtn');
+	var devideBtn = document.querySelector('#devideBtn');
+	var resetBtn = document.querySelector('#resetBtn');
+
+	var result = document.querySelector('#result'); 
+
+		// result.innerHTML = sum(parseInt(firstNumber.value),parseInt(secoundNumber.value));
+	 plusBtn.addEventListener('click', function(){
+		result.innerHTML = parseInt(firstNumber.value) + parseInt(secoundNumber.value);
+	})
+	 subtractBtn.addEventListener('click', function(){
+		result.innerHTML = parseInt(firstNumber.value) - parseInt(secoundNumber.value);
+	})
+	 multiBtn.addEventListener('click', function(){
+		result.innerHTML = parseInt(firstNumber.value) * parseInt(secoundNumber.value);
+	})
+	 devideBtn.addEventListener('click', function(){
+		result.innerHTML = parseInt(firstNumber.value) / parseInt(secoundNumber.value);
+	})
+	 modulusBtn.addEventListener('click', function(){
+		result.innerHTML = parseInt(firstNumber.value) % parseInt(secoundNumber.value);
+	})	
+	resetBtn.addEventListener('click', function(){
+		result.innerHTML = '';
+		firstNumber.value = '';
+		secoundNumber.value = '';
+	})
+</script>
