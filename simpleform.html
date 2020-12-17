@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>form</title>
+		<style type="text/css">
+			body{
+			    text-align: center;
+			    margin-top: 114px;
+			    font-size: 50px;
+			    background: cornflowerblue;
+			}
+
+		</style>
+	</head>
+<body>
+	<label
+	 for = 'firstName'>Enter your first name</label>
+	<input type="text" name="firsrName" id="firstName">
+	<br>
+	<label for = 'lastName'>Enter your last name</label>
+	<input type="text" name="lastName" id="lastName">
+	<br>
+	<button id="saveBtn">SAVE</button>
+	<br>
+	<h2>Fullname =<span id="fullname"></span></h2>
+</body>
+</html>
+
+<script type="text/javascript">
+	var firstName = document.getElementById('firstName')
+	var lastName = document.getElementById('lastName')
+	var saveBtn = document.getElementById('saveBtn')
+	var fullname = document.getElementById('fullname')	
+	saveBtn.addEventListener('click' ,event=>{
+		fullname.innerHTML = firstName.value+" "+lastName.value;
+		// console.log('firstName')
+		// alert('shubh')
+	});
+</script>
+
