@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <title>Guess</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="guess.js"></script>
+</head>
+<body class="back">
+    <div class="row">
+        <div class="col-sm-6">
+            <button id="again" class="again">Again!</button>
+        </div>
+        <div class="col-sm-6">
+            <p class="between">Between 1 and 20</p>
+        </div>
+    </div>
+
+    <div class="heading">
+        <h1>Guess My Number!</h1>
+        <hr>
+    </div>
+    <div class="box"><span class="questionMark">?</span></div>
+    <div class="row">
+        <div class="col-sm-6 inputCheck">
+            <input type="number"  class="inputBox"><br>
+            <button class="checkBtn" id="btn" >Check!</button>
+        </div>
+        <div class="col-sm-6">
+            <div class="result">
+                <div class="start_guessing">Start guessing...</div><br>
+                <div>Point : <span class="point">20</span></div>
+                <div>HighScore : <span class="highScore">0</span></div>
+            </div>
+        </div>
+    </div>    
+</body>
+</html>
+
+
+
+<script>
+    'use strict'
+    let isAgeAboveEighteen = false;
+    let age = 20;
+
+    if(age > 18){
+        isAgeAboveEighten = true;
+    }
+
+    console.log(typeof(isAgeAboveEighten));
+
+    if(isAgeAboveEighteen == true){
+        alert('You are eligible for voting');
+    }
+
+</script>
